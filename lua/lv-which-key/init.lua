@@ -66,6 +66,8 @@ vim.api.nvim_set_keymap("v", "<leader>/", ":CommentToggle<CR>", {noremap = true,
 -- close buffer
 vim.api.nvim_set_keymap("n", "<leader>c", ":BufferClose<CR>", {noremap = true, silent = true})
 
+-- tagbar
+vim.api.nvim_set_keymap("n", "<leader>t", ":TagbarToggle<CR>", {noremap = true, silent = true})
 -- TODO create entire treesitter section
 
 local mappings = {
@@ -76,12 +78,13 @@ local mappings = {
     ["h"] = "No Highlight",
     d = {
         name = "+Debug",
-        b = {"<cmd>DebugToggleBreakpoint<cr>", "Toggle Breakpoint"},
-        c = {"<cmd>DebugContinue<cr>", "Continue"},
-        i = {"<cmd>DebugStepInto<cr>", "Step Into"},
-        o = {"<cmd>DebugStepOver<cr>", "Step Over"},
-        r = {"<cmd>DebugToggleRepl<cr>", "Toggle Repl"},
-        s = {"<cmd>DebugStart<cr>", "Start"}
+        b = {"<Plug>VimspectorToggleBreakpoint", "Toggle Breakpoint"},
+        i = {"<Plug>VimspectorStepInto", "Step Into"},
+        o = {"<Plug>VimspectorStepOver", "Step Over"},
+        s = {":call vimspector#Launch()<CR>", "Start"},
+        c = {":call vimspector#Continue()<CR>", "Continue"},
+        w = {"<Plug>VimspectorRestart", "Restart"},
+        r = {":VimspectorReset<CR>", "Reset/Stop"}
     },
     g = {
         name = "+Git",

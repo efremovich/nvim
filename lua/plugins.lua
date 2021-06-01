@@ -80,7 +80,14 @@ return require("packer").startup(function(use)
     use {"romgrk/barbar.nvim", opt = true}
 
     use 'voldikss/vim-floaterm'
+    
+    -- Debugging
+    use 'puremourning/vimspector'
+   
+    --Tagbar 
+    use 'majutsushi/tagbar'
 
+    require_plugin("vimspector")
     require_plugin("nvim-lspconfig")
     require_plugin("lspsaga.nvim")
     require_plugin("nvim-lspinstall")

@@ -9,7 +9,7 @@ require('lv-nvimtree') -- This plugin must be required somewhere before colorsch
 require('colorscheme') -- This plugin must be required somewhere after nvimtree. Placing it before will break navigation keymappings
 require('lv-galaxyline')
 require('lv-comment')
-require('lv-nvim-dap')
+require('lv-vimspector')
 require('lv-compe')
 require('lv-barbar')
 require('lv-dashboard')

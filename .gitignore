@@ -5,7 +5,7 @@ tags*
 pythonpath.vim
 nodepath.vim
 autoload/plugged/*
-vimspector-config/gadgets/*
+utils/vimspector-config/gadgets/*
 paths.vim
 session
 wiki/
