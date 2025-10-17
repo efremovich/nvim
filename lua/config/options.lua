@@ -3,3 +3,5 @@
 -- Add any additional options here
 --
 vim.opt.spelllang = { "en", "ru" }
+
+vim.g.ai_cmp = false
